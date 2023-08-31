@@ -45,3 +45,14 @@ BaseClass2(name="test")
 BaseClass2(name="test")
 BaseClass2(name="test")
 BaseClass(name="test", name2="test")
+
+
+class BaseClass3(AbstractClass):
+    def __init__(self, name2: str) -> None:
+        pass
+
+
+try:
+    BaseClass3(name2="test")
+except Exception:
+    print("BaseClass3 failed to initialize because init args are not matching...")
